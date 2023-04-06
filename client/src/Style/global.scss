@@ -1,0 +1,44 @@
+//Shop page text style
+
+.shop-text {
+  -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+
+  -webkit-text-stroke-color: white;
+}
+.dash-text {
+  -webkit-text-fill-color: #ea580c; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+
+  -webkit-text-stroke-color: white;
+}
+///Card image hover effect
+.image-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.main:hover img.image-hover {
+  opacity: 1;
+}
+.main:hover img.image-main {
+  opacity: 0;
+}
+
+.activeProfile {
+  background-color: #f1f5f9;
+}
+.scrollbar::-webkit-scrollbar {
+  border: 1px solid red;
+  display: none;
+  visibility: hidden;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: none;
+}

@@ -1,0 +1,21 @@
+.image-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.main:hover img.image-hover {
+  opacity: 1;
+}
+
+.main:hover img.image-main {
+  opacity: 0;
+}
+/*# sourceMappingURL=newBike.css.map */
