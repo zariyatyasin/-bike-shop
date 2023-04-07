@@ -13,7 +13,7 @@ export const fetchAllUser = createAsyncThunk("fetchAllUser", async () => {
   };
   try {
     const response = await axios.get(
-      `http://localhost:5000/api/users/find/`,
+      `https://bikeshop-llpq.onrender.com/api/users/find/`,
 
       config
     );

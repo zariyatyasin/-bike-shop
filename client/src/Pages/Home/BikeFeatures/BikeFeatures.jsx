@@ -8,7 +8,7 @@ const BikeFeatures = () => {
         <div className="  h-[400px] relative bg-black  " key={id}>
           <img
             alt="bike"
-            className=" h-full  object-cover   "
+            className=" h-full  w-full object-cover   "
             src={item.image}
           />
           <div

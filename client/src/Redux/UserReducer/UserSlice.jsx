@@ -11,7 +11,7 @@ export const fetchUserLogin = createAsyncThunk(
     };
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://bikeshop-llpq.onrender.com/api/auth/login",
         { email, password },
         config
       );
@@ -38,7 +38,7 @@ export const fetchUserUpdate = createAsyncThunk(
     };
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/users/${id}`,
+        `https://bikeshop-llpq.onrender.com/api/users/${id}`,
         { email, fullname, username },
         config
       );

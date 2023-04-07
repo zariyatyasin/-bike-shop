@@ -57,16 +57,24 @@ const ProfileDropDown = ({ currentUser }) => {
               </Link>
             )}
           </li>
-          <li>
-            <div className="block px-4 py-2 hover:bg-[#202020] text-gray-50 cursor-pointer">
-              Settings
-            </div>
-          </li>
-          <li>
-            <div className="block px-4 py-2 hover:bg-[#202020] text-gray-50 cursor-pointer">
-              Earnings
-            </div>
-          </li>
+          {!currentUser?.isAdmin && (
+            <li>
+              <Link to={"/profile/userorder"}>
+                <div className="block px-4 py-2 hover:bg-[#202020] text-gray-50 cursor-pointer">
+                  My order
+                </div>
+              </Link>
+            </li>
+          )}
+          {!currentUser?.isAdmin && (
+            <li>
+              <Link>
+                <div className="block px-4 py-2 hover:bg-[#202020] text-gray-50 cursor-pointer">
+                  Setting
+                </div>
+              </Link>
+            </li>
+          )}
         </ul>
         <div className="py-1">
           <div

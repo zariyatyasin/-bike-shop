@@ -15,7 +15,7 @@ const NewUserTable = () => {
         },
       };
       const newUser = await axios.get(
-        "http://localhost:5000/api/users/find/?new=true",
+        "https://bikeshop-llpq.onrender.com/api/users/find/?new=true",
         config
       );
       setData(newUser.data);

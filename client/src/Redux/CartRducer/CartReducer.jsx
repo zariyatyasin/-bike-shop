@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import toastify CSS
 const initialState = {
   cartProduct: [],
 };
@@ -17,11 +18,18 @@ export const cartSlice = createSlice({
       } else {
         state.cartProduct.push(action.payload);
       }
+      toast.success("Product added to cart", {
+        position: "bottom-left",
+      });
     },
     removeItem: (state, action) => {
       state.cartProduct = state.cartProduct.filter(
         (item) => item.id !== action.payload
       );
+
+      toast.error("Product removed from cart", {
+        position: "bottom-left",
+      });
     },
     resetCart: (state, action) => {
       state.cartProduct = [];

@@ -5,10 +5,10 @@ const Reviews = () => {
     <div>
       <section className="py-20  sm:py-32">
         <h1 className=" text-orange-600 mb-4 tracking-wide text-center text-sm font-medium">
-          CHECK IT OUT
+          CUSTOMER REVIEWS
         </h1>
         <h2 className="text-4xl mb-5 font-medium   text-center tracking-normal text-gray-900">
-          Best Sellers
+          Best Reviews
         </h2>
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <ul

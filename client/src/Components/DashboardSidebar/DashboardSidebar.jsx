@@ -29,10 +29,7 @@ const DashboardSidebar = () => {
       text: "Dashboard",
       icon: <HomeOutlined />,
     },
-    {
-      text: "Client Facing",
-      icon: null,
-    },
+
     {
       text: "Product",
       icon: <ShoppingCartOutlined />,
@@ -49,10 +46,6 @@ const DashboardSidebar = () => {
       text: "Uploadproduct",
       icon: <PointOfSaleOutlined />,
     },
-    {
-      text: "Sales",
-      icon: null,
-    },
 
     {
       text: "Global",
@@ -66,10 +59,7 @@ const DashboardSidebar = () => {
       text: "Breakdown",
       icon: <PieChartOutlined />,
     },
-    {
-      text: "Management",
-      icon: null,
-    },
+
     {
       text: "Admin",
       icon: <AdminPanelSettingsOutlined />,
@@ -82,14 +72,14 @@ const DashboardSidebar = () => {
 
   return (
     <div>
-      <div className="w-full fixed top-0 left-0  z-10">
+      <div className="w-full h-screen fixed top-0 left-0  z-40">
         <AdminDashBoardNav />
         <div
           className={`absolute top-0 left-0 h-screen  scrollbar overflow-y-scroll
           bg-white border-r border-grey-200 
           ${OpenSidebar ? "w-64" : "w-0"}`}
         >
-          <div className="flex  items-center cursor-pointer relative justify-center   h-16 border-b">
+          <div className="flex  items-center cursor-pointer relative justify-center   h-16 ">
             <div
               className={`  ${
                 OpenSidebar ? "w-64" : "hidden"
@@ -105,7 +95,7 @@ const DashboardSidebar = () => {
               <ArrowCircleRightIcon />
             </div>
           </div>
-          <div className="  flex-grow  border border-r-2 ">
+          <div className="  flex-grow    border-t-2 ">
             <ul className="flex flex-col py-4 space-y-1  ">
               {navItems.map((item, id) => (
                 <li key={id}>

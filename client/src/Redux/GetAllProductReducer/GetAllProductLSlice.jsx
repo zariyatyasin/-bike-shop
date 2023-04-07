@@ -7,9 +7,9 @@ export const fetchAllProduct = createAsyncThunk(
     try {
       const response = catId
         ? await axios.get(
-            `http://localhost:5000/api/products/?category=${filters}`
+            `https://bikeshop-llpq.onrender.com/api/products/?category=${filters}`
           )
-        : await axios.get(`http://localhost:5000/api/products/ `);
+        : await axios.get(`https://bikeshop-llpq.onrender.com/api/products/ `);
 
       return response?.data;
     } catch (error) {
@@ -33,7 +33,7 @@ export const createProduct = createAsyncThunk(
     };
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/products`,
+        `https://bikeshop-llpq.onrender.com/api/products`,
         { name, images, countInStock, description, price },
         config
       );
@@ -58,7 +58,7 @@ export const deleteProduct = createAsyncThunk(
     console.log(id);
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/products/${id}`,
+        `https://bikeshop-llpq.onrender.com/api/products/${id}`,
 
         config
       );

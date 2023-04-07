@@ -10,6 +10,8 @@ import ProfileDropDown from "./ProfileDropDown";
 
 export const Navbar = () => {
   const { currentUser } = useSelector((state) => state.LoginInUser);
+  const { cartProduct } = useSelector((state) => state.cart);
+  console.log(cartProduct.length);
   const [cartOpen, setCartopen] = useState(false);
   return (
     <div>
@@ -28,18 +30,18 @@ export const Navbar = () => {
         </Link>
         <nav className=" hidden lg:flex  text-base lg:text-lg">
           <ul className="flex items-center text-white ml-4 xl:ml-8 mr-auto">
-            <li className="p-3 xl:p-6 active">
+            <li className="m-3 xl:m-6 active">
               <Link to={`/products/All-Bike`}>
                 <span> Products</span>
               </Link>
             </li>
-            <li className="p-3 xl:p-6">
+            <li className="m-3 xl:m-6">
               <Link>
                 <span>Marketplace</span>
               </Link>
             </li>
 
-            <li className="p-3 xl:p-6">
+            <li className="m-3 xl:m-6">
               <Link className=" relative" to={"/contact"}>
                 <div>Contact</div>
                 <span className="flex absolute top-0 right-[-8px] ">
@@ -57,11 +59,17 @@ export const Navbar = () => {
               style={{ fontSize: "24px" }}
             ></SearchOutlinedIcon>
           </div>
-          <div className="   md:block text-white  p-3 xl:p-6">
-            <ShoppingCartOutlinedIcon
-              style={{ fontSize: "24px" }}
-              onClick={() => setCartopen(!cartOpen)}
-            />
+          <div
+            className=" relative  cursor-pointer   md:block text-white  m-3 xl:m-6"
+            onClick={() => setCartopen(!cartOpen)}
+          >
+            {cartProduct.length > 0 && (
+              <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs   text-white bg-orange-500 border-2 border-white rounded-full -top-3 -right-2  dark:border-gray-900">
+                {cartProduct.length}
+              </div>
+            )}
+
+            <ShoppingCartOutlinedIcon style={{ fontSize: "24px" }} />
           </div>
           {currentUser ? (
             <div className=" md:block">

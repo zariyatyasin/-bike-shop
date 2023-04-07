@@ -123,13 +123,15 @@ export const NavbarCart = (props) => {
                     <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                       <p>
                         or
-                        <button
-                          type="button"
-                          className="font-medium text-indigo-600 hover:text-indigo-500"
-                        >
-                          Continue Shopping
-                          <span aria-hidden="true"> &rarr;</span>
-                        </button>
+                        <Link to={`/products/All-Bike`}>
+                          <button
+                            type="button"
+                            className="font-medium text-indigo-600 hover:text-indigo-500"
+                          >
+                            Continue Shopping
+                            <span aria-hidden="true"> &rarr;</span>
+                          </button>
+                        </Link>
                       </p>
                     </div>
                   </div>

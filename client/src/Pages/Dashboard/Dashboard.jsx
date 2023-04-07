@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DashbordOverview from "./DashBoardList/DashbordOverview";
 import ProfileUpdate from "./DashBoardList/ProfileUpdate";
 import DashboardSidebar from "./DashboardSidebar";
 import AcountMenuMobile from "./AcountMenuMobile";
 import { useParams } from "react-router-dom";
 import UserOrderPage from "./DashBoardList/UserOrderPage";
+
 const Dashboard = () => {
   const { id } = useParams();
-  console.log(id);
-  const [data, setData] = useState(id);
+  console.log("this si", id);
+  const [data, setData] = useState("userprofile"); // Initialize with "userprofile"
 
   const take = (e) => {
     setData(e);
@@ -21,14 +22,16 @@ const Dashboard = () => {
           Account
         </h3>
       </div>
-      <div className=" mt-5 md:hidden ">
+      {/* <div className=" mt-5 md:hidden ">
         <AcountMenuMobile></AcountMenuMobile>
-      </div>
-      <div className="hidden md:flex mt-5">
-        <DashboardSidebar take={take}></DashboardSidebar>
-        {data === "userprofile" && <DashbordOverview></DashbordOverview>}
-        {data === "userorder" && <UserOrderPage></UserOrderPage>}
-        {data === "tab6" && <ProfileUpdate></ProfileUpdate>}
+      </div> */}
+      <div className="flex mt-5">
+        <div className="hidden md:flex">
+          <DashboardSidebar take={take}></DashboardSidebar>
+        </div>
+        {id === "userprofile" && <DashbordOverview></DashbordOverview>}
+        {id === "userorder" && <UserOrderPage></UserOrderPage>}
+        {id === "useredit" && <ProfileUpdate></ProfileUpdate>}
       </div>
     </div>
   );

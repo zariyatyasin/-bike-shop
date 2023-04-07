@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import { Navbar } from "./Components/Navbar/Navbar";
-
+import { ToastContainer } from "react-toastify";
 import Home from "./Pages/Home/Home";
 import { Login } from "./Pages/Login/Login";
 import Products from "./Pages/Products/Products";
@@ -16,7 +16,7 @@ import CheckOutPage from "./Pages/CheckOutPage/CheckOutPage";
 import SingleProduct from "./Pages/SingleProduct/SingleProduct";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import MobileNav from "./Components/MobileMenu/MobileNav";
-
+import "react-toastify/dist/ReactToastify.css";
 import AdminDashboard from "./AdminDashboard/AdminDashBoard/AdminDashboard";
 import AdminUserList from "./AdminDashboard/userList/AdminUserList";
 import DashboardSidebar from "./Components/DashboardSidebar/DashboardSidebar";
@@ -70,6 +70,7 @@ const SidebarLayout = () => {
 const Layout = () => {
   return (
     <div>
+      <ToastContainer />
       <Navbar></Navbar>
       <Outlet />
       <div className="md:hidden">
@@ -132,7 +133,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/profile/:link",
+        path: "/profile/:id",
         element: (
           <ToLogin>
             <Dashboard />

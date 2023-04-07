@@ -23,6 +23,33 @@ export const Login = () => {
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
               Sign in to your account
             </h1>
+
+            <div>
+              <div class=" flex w-full max-w-sm overflow-hidden bg-white rounded-lg border  ">
+                <div class="flex items-center justify-center w-2 bg-red-500"></div>
+
+                <div class="px-4 py-2 -mx-3">
+                  <div class="mx-3">
+                    <span class="font-semibold text-blue-500 dark:text-blue-400">
+                      admin@gmail.com
+                    </span>
+                    <p class="text-sm text-gray-600  ">Pass: admin</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex  mt-2 w-full max-w-sm overflow-hidden bg-white rounded-lg border  ">
+                <div class="flex items-center justify-center w-2 bg-blue-500"></div>
+
+                <div class="px-4 py-2 -mx-3">
+                  <div class="mx-3">
+                    <span class="font-semibold text-blue-500 dark:text-blue-400">
+                      client@gmail.com{" "}
+                    </span>
+                    <p class="text-sm text-gray-600  ">Pass: client</p>
+                  </div>
+                </div>
+              </div>
+            </div>
             {isError && <div className="text-red-600">{isError}</div>}
 
             {isLoading ? (
