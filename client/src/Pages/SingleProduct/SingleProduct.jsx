@@ -18,57 +18,49 @@ const SingleProduct = () => {
   const [qty, setQty] = useState(1);
 
   const dispatch = useDispatch();
-  if (!data) {
-    return (
-      <div className="h-screen flex items-center justify-center">
-        <Loader />
-      </div>
-    );
-  }
-  if (isLoading) {
-    return (
-      <div className="h-screen flex items-center justify-center">
-        <Loader />
-      </div>
-    );
-  }
 
   return (
     <div>
       <div className="bg-white">
         <div className="pt-6">
-          <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-            <div className="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-              <img
-                src={data?.images[0]?.img1}
-                alt=" Bike"
-                className="h-full w-full object-cover object-center"
-              />
+          {isLoading ? (
+            <div className="border flex  justify-center">
+              <Loader />
             </div>
-            <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-              <div className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
+          ) : (
+            <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
+              <div className="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
                 <img
                   src={data?.images[0]?.img1}
-                  alt="Model  "
+                  alt=" Bike"
                   className="h-full w-full object-cover object-center"
                 />
               </div>
-              <div className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
+              <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+                <div className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
+                  <img
+                    src={data?.images[0]?.img1}
+                    alt="Model  "
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
+                <div className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
+                  <img
+                    src="https://media.zigcdn.com/media/model/2021/Sep/right-side-view-137975553_600x400.jpg"
+                    alt="Model  "
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
+              </div>
+              <div className="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
                 <img
-                  src="https://media.zigcdn.com/media/model/2021/Sep/right-side-view-137975553_600x400.jpg"
-                  alt="Model  "
+                  src="https://www.webbikeworld.com/wp-content/uploads/2023/01/2023_Yamaha_R15M_review_web_bike_world_011.jpg"
+                  alt="Model  ."
                   className="h-full w-full object-cover object-center"
                 />
               </div>
             </div>
-            <div className="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
-              <img
-                src="https://www.webbikeworld.com/wp-content/uploads/2023/01/2023_Yamaha_R15M_review_web_bike_world_011.jpg"
-                alt="Model  ."
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-          </div>
+          )}
 
           <div className="mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24">
             <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
