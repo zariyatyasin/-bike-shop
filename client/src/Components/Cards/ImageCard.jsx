@@ -1,7 +1,6 @@
 import React from "react";
 import "../../Style/global.css";
 export const ImageCard = ({ item }) => {
-  console.log(item?.images[0]?.img1);
   return (
     <div>
       <div className="h-64 cursor-pointer bg-gray-100 flex flex-col items-center justify-center">

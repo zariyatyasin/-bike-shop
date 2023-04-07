@@ -31,9 +31,7 @@ const BikeData = [
     id: 2,
     name: " Yamaha R15 V2",
     images: [
-      {
-        img1: "/image/bike2.png",
-      },
+      { img1: "/image/bike5.png" },
       {
         img2: "/image/bike2.png",
       },
@@ -56,9 +54,7 @@ const BikeData = [
     id: 3,
     name: " Yamaha R15 V3",
     images: [
-      {
-        img1: "/image/bike3.png",
-      },
+      { img1: "/image/bike4.png" },
       {
         img2: "/image/bike2.png",
       },
@@ -69,6 +65,7 @@ const BikeData = [
     category: ["lectronics"],
     price: "220,0000",
     countInStock: 5,
+    newItem: true,
     rating: 3,
     numReviews: 12,
     discount: "12%",
@@ -106,7 +103,7 @@ const BikeData = [
     name: " Yamaha R15 V4",
     images: [
       {
-        img1: "/image/bike4.png",
+        img1: "/image/bike3.png",
       },
       {
         img2: "/image/bike2.png",
@@ -131,7 +128,7 @@ const BikeData = [
     name: " Yamaha R15 V4",
     images: [
       {
-        img1: "/image/bike5.png",
+        img1: "/image/bike2.png",
       },
       {
         img2: "/image/bike2.png",

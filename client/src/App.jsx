@@ -25,6 +25,7 @@ import UploadProduct from "./AdminDashboard/AdminProductUpload/UploadProduct";
 import Footer from "./Pages/footer/Footer";
 import AdminTranList from "./AdminDashboard/AdminDashBoard/AdminTranList";
 import Map from "./AdminDashboard/AdminDashBoard/Map";
+import { Error } from "./Components/error/Error";
 
 const ToHomePage = ({ children }) => {
   const { currentUser } = useSelector((state) => state.LoginInUser);
@@ -41,6 +42,9 @@ const ToLogin = ({ children }) => {
     return <Navigate to={"/login"} />;
   }
   return children;
+};
+const NotFound = () => {
+  return <Error />;
 };
 
 const AdminAccess = ({ children }) => {
@@ -208,6 +212,10 @@ const router = createBrowserRouter([
         ),
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
