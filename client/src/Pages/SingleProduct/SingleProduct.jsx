@@ -10,7 +10,7 @@ const SingleProduct = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ["repoData"],
     queryFn: () =>
-      fetch(`https://bikeshop-llpq.onrender.com/api/products/${id}`).then(
+      fetch(`https://online-bike-shop.vercel.app/api/products/${id}`).then(
         (res) => res.json()
       ),
   });

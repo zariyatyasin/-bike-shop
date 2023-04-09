@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "proxy": "https://bikeshop-llpq.onrender.com/api",
+  "proxy": "https://online-bike-shop.vercel.app/api",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",

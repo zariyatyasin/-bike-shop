@@ -7,9 +7,9 @@ export const fetchAllProduct = createAsyncThunk(
     try {
       const response = catId
         ? await axios.get(
-            `https://bikeshop-llpq.onrender.com/api/products/?category=${filters}`
+            `https://online-bike-shop.vercel.app/api/products/?category=${filters}`
           )
-        : await axios.get(`https://bikeshop-llpq.onrender.com/api/products/ `);
+        : await axios.get(`https://online-bike-shop.vercel.app/api/products/ `);
 
       return response?.data;
     } catch (error) {
@@ -33,7 +33,7 @@ export const createProduct = createAsyncThunk(
     };
     try {
       const response = await axios.post(
-        `https://bikeshop-llpq.onrender.com/api/products`,
+        `https://online-bike-shop.vercel.app/api/products`,
         { name, images, countInStock, description, price },
         config
       );
@@ -58,7 +58,7 @@ export const deleteProduct = createAsyncThunk(
     console.log(id);
     try {
       const response = await axios.delete(
-        `https://bikeshop-llpq.onrender.com/api/products/${id}`,
+        `https://online-bike-shop.vercel.app/api/products/${id}`,
 
         config
       );

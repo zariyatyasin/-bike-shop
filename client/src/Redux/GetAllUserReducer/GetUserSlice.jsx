@@ -13,7 +13,7 @@ export const fetchAllUser = createAsyncThunk("fetchAllUser", async () => {
   };
   try {
     const response = await axios.get(
-      `https://bikeshop-llpq.onrender.com/api/users/find/`,
+      `https://online-bike-shop.vercel.app/api/users/find/`,
 
       config
     );

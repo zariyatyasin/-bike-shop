@@ -11,7 +11,7 @@ export const fetchUserLogin = createAsyncThunk(
     };
     try {
       const response = await axios.post(
-        "https://bikeshop-llpq.onrender.com/api/auth/login",
+        "https://online-bike-shop.vercel.app/api/auth/login",
         { email, password },
         config
       );
@@ -38,7 +38,7 @@ export const fetchUserUpdate = createAsyncThunk(
     };
     try {
       const response = await axios.put(
-        `https://bikeshop-llpq.onrender.com/api/users/${id}`,
+        `https://online-bike-shop.vercel.app/api/users/${id}`,
         { email, fullname, username },
         config
       );

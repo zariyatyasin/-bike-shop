@@ -15,7 +15,7 @@ const NewUserTable = () => {
         },
       };
       const newUser = await axios.get(
-        "https://bikeshop-llpq.onrender.com/api/users/find/?new=true",
+        "https://online-bike-shop.vercel.app/api/users/find/?new=true",
         config
       );
       setData(newUser.data);
