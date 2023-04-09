@@ -30,7 +30,11 @@ app.use("/api/users",userRouter)
 app.use("/api/products",productRouter)
 app.use("/api/carts",cartRouter)
 app.use("/api/orders",orderRouter)
-
+app.get('*',(req,res,next)=>{
+    res.status(404).json({
+      message:'bad request'
+    })
+  })
 const PORT = process.env.PORT || 5000;
 app.listen(PORT,()=>{
     console.log("Backend server is running on",PORT);
