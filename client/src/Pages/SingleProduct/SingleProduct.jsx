@@ -46,7 +46,7 @@ const SingleProduct = () => {
                 </div>
                 <div className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
                   <img
-                    src="https://media.zigcdn.com/media/model/2021/Sep/right-side-view-137975553_600x400.jpg"
+                    src={data?.images[0]?.img1}
                     alt="Model  "
                     className="h-full w-full object-cover object-center"
                   />
@@ -54,7 +54,7 @@ const SingleProduct = () => {
               </div>
               <div className="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
                 <img
-                  src="https://www.webbikeworld.com/wp-content/uploads/2023/01/2023_Yamaha_R15M_review_web_bike_world_011.jpg"
+                  src={data?.images[0]?.img1}
                   alt="Model  ."
                   className="h-full w-full object-cover object-center"
                 />
